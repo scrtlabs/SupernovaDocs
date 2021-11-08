@@ -18,7 +18,7 @@ Version 1.2.0 has been released, called the Supernova upgrade!
 
 * Auto Registration - The new node registering process is now automated via a new command `secretd auto-register`
 
-* (experimental) Wasm Module Cache in the Enclave - Added a config value `wasm.contract-memory-enclave-cache-size` (default 0) 
+* (experimental) Wasm Module Cache in the Enclave - Added a config value `wasm.contract-memory-enclave-cache-size` (default 0) see details below.
 
 ## API and endpoints
 
@@ -46,7 +46,7 @@ modifying /home/\<account\>/.secretd/config/app.toml and looking for the `api` c
 
 The directory at `~/.sgx_secrets` has been moved to `/opt/secret/.sgx_secrets`.
 
-which lets you hold an amount of compiled wasm modules in the enclave's memory in an LRU cache. Increasing this number will increase the minimum RAM requirement but will increase performance of repeated calls to contracts with the same code, such as multiple queries handled in an API node, or a wave of usage coming in to a small set of contracts.
+The config option `wasm.contract-memory-enclave-cache-size` lets you hold an amount of compiled wasm modules in the enclave's memory in an LRU cache. Increasing this number will increase the minimum RAM requirement, but will increase performance of repeated calls to contracts with the same code, such as multiple queries handled in an API node, or a wave of usage coming in to a small set of contracts. While this defaults to 0 for now, we recommend trying increasing it to 5 or more to see how performance and stability are affected.
 
 ## SecretJS
 
