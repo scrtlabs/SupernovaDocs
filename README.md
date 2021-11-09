@@ -8,7 +8,7 @@ Please note that the `ibc` module will be disabled on launch, and will require a
 
 ## App Developers
 
-We recommend reading the [CHANGELOG.md](CHANGELOG.md) as well as specific information in [app developers](./app developers) and make sure your apps are compatible with the upgrade
+We recommend reading the [CHANGELOG.md](CHANGELOG.md) as well as specific information in [app developers](./app%20developers) and make sure your apps are compatible with the upgrade
 
 ## Node Runners and Validators
 
