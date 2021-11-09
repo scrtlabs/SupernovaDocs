@@ -1,6 +1,6 @@
 # How To Join Secret Network as a Full Node on Testnet
 
-This document details how to join the Secret Network `testnet` as a full node. Once your full node is running, you can turn it into a validator in the optional last step.
+This document details how to join the Secret Network as a full node. Once your full node is running, you can turn it into a validator in the optional last step.
 
 ## Requirements
 
@@ -12,13 +12,13 @@ This document details how to join the Secret Network `testnet` as a full node. O
 
 ### Minimum requirements
 
-- 1GB RAM
+- 16GB RAM
 - 100GB HDD
 - 1 dedicated core of any Intel Skylake processor (Intel® 6th generation) or better
 
 ### Recommended requirements
 
-- 2GB RAM
+- 32GB RAM
 - 256GB SSD
 - 2 dedicated cores of any Intel Skylake processor (Intel® 6th generation) or better
 - Motherboard with support for SGX in the BIOS
@@ -29,12 +29,12 @@ Refer to https://ark.intel.com/content/www/us/en/ark.html#@Processors if unsure 
 
 ### 0. Step up SGX on your local machine
 
-See instructions for [setup](setup-sgx-testnet.md) and [verification](verify-sgx.md).
+See instructions for [setup](setup-sgx.md) and [verification](verify-sgx.md).
 
 ### 1. Download the Secret Network package installer for Debian/Ubuntu:
 
 ```bash
-wget https://github.com/enigmampc/SecretNetwork/releases/download/v1.2.0-beta1/secretnetwork_1.2.0-beta1-8-gbe1ca55e_amd64.deb
+wget https://github.com/enigmampc/SecretNetwork/releases/download/v1.2.0/secretnetwork_1.2.0_amd64.deb
 ```
 
 ([How to verify releases](../../../verify-releases.md))
