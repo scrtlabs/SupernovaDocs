@@ -22,7 +22,7 @@ secretcli keys add <key-alias>
 ```
 
 **:warning:Note:warning:: Backup the mnemonics!**
-**:warning:Note:warning:: Please make sure you also [backup your validator](backup-a-testnet-validator.md)**
+**:warning:Note:warning:: Please make sure you also [backup your validator](backup-a-validator.md)**
 
 **Note**: If you already have a key you can import it with the bip39 mnemonic with `secretcli keys add <key-alias> --recover` or with `secretcli keys export` (exports to `stderr`!!) & `secretcli keys import`.
 
@@ -36,7 +36,7 @@ To create a `secret` wallet, run:
 secretcli keys add <key-alias>
 ```
 
-Make sure to backup the mnemonic you got from the above command!
+Make sure to back up the mnemonic you got from the above command!
 
 Then transfer funds to address you just created.
 
@@ -52,7 +52,7 @@ If you get the following message, it means that you have no tokens yet:
 ERROR: unknown address: account secret1xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx does not exist
 ```
 
-#### 6. Join the network as a new validator: replace `<MONIKER>` with the moniker you configured in step 3 of [creating a full-node](../node%20runners/run-full-node-testnet.md), and adjust the amount you want to stake
+#### 6. Join the network as a new validator: replace `<MONIKER>` with the moniker you configured in step 3 of [creating a full-node](../node%20runners/run-full-node.md), and adjust the amount you want to stake
 
 (remember 1 SCRT = 1,000,000 uSCRT, and so the command below stakes 100k SCRT).
 
@@ -78,7 +78,7 @@ Or run: `secretcli q staking validators | grep moniker`. You should see your mon
 
 ### Dangers in running a validator
 
-There are a couple of scenarios that can lead to losing a precentage of your and your delegators' stake. These are called slashing events.
+There are a couple of scenarios that can lead to losing a percentage of your and your delegators' stake. These are called slashing events.
 
 The following is updated as of March 23, 2020.
 
@@ -103,10 +103,6 @@ Penalties for double-signing:
 
 - Slashing of 5% of your and your delegators' staking amount.
 - Jailing forever (tombstoned) of your validator node. You cannot earn block rewards anymore with this validator and you and your delegators must redelegate your stake to a different validator.
-
-### Protecting your validator agains DDoS attacks
-
-See [Sentry Nodes](../../../validators-and-full-nodes/sentry-nodes.md).
 
 ### Staking more tokens
 
@@ -150,13 +146,13 @@ secretcli tx distribution withdraw-rewards $(secretcli keys show --bech=val -a <
 
 ### Removing your validator
 
-Currently deleting a validator is not possible. If you redelegate or unbond your self-delegations then your validator will become offline and all your delegators will start to unbond.
+Currently, deleting a validator is not possible. If you redelegate or unbond your self-delegations then your validator will become offline and all your delegators will start to unbond.
 
 ### Changing your validator's commission-rate
 
 You are currently unable to modify the `--commission-max-rate` and `--commission-max-change-rate"` parameters.
 
-Modifying the commision-rate can be done using this:
+Modifying the commission-rate can be done using this:
 
 ```
 secretcli tx staking edit-validator --commission-rate="0.05" --from <key-alias>

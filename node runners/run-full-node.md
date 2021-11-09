@@ -141,7 +141,7 @@ secretcli config node tcp://TBD:26657
 secretcli config output json
 ```
 
-Set up a key. Make sure you backup the mnemonic and the keyring password.
+Set up a key. Make sure you back up the mnemonic and the keyring password.
 
 ```bash
 secretcli keys add $INSERT_YOUR_KEY_NAME
@@ -151,7 +151,7 @@ This will output your address, a 45 character-string starting with `secret1...`.
 
 ### 12. Register your node on-chain
 
-Run this step on the CLI machine. If you're using different CLI machine than the full node, copy `/opt/secret/.sgx_secrets/attestation_cert.der` from the full node to the CLI machine.
+Run this step on the CLI machine. If you're using a different CLI machine than the full node, copy `/opt/secret/.sgx_secrets/attestation_cert.der` from the full node to the CLI machine.
 
 ```bash
 secretcli tx register auth </opt/secret/.sgx_secrets/attestation_cert.der> --from $INSERT_YOUR_KEY_NAME
@@ -177,7 +177,7 @@ secretcli query register secret-network-params
 ls -lh ./io-master-cert.der ./node-master-cert.der
 ```
 
-If you're using different CLI machine than the validator node, copy `node-master-cert.der` from the CLI machine to the validator node.
+If you're using a different CLI machine than the validator node, copy `node-master-cert.der` from the CLI machine to the validator node.
 
 ### 15. Configure your secret node
 
@@ -278,7 +278,7 @@ secretd tendermint show-validator
 
 The pubkey is an 83-character string starting with `secretvalconspub...`.
 
-On the CLI machine, run the following command. The account you use becomes the operator account for your validator, which you'll use to collect rewards, participate in on-chain governance, etc, so make sure you keep good backups of the key. `<moniker>` is the name for your validator which is shown e.g. in block explorers.
+On the CLI machine, run the following command. The account you use becomes the operator account for your validator, which you'll use to collect rewards, participate in on-chain governance, etc., so make sure you keep good backups of the key. `<moniker>` is the name for your validator which is shown e.g. in block explorers.
 
 ```bash
 secretcli tx staking create-validator \
