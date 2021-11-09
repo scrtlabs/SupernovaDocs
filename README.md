@@ -39,24 +39,19 @@ Validators may perform these steps manually, however links to the genesis file w
 secretd export --height=813800 --for-zero-height --jail-whitelist secretvaloper1qx5pppsfrqwlnmxj7prpx8rysxm2u5vzhaux25 > secret-3-genesis-export.json
 ```
 
-2. Verify the hash:
-```
-$ sha256sum secret-3-genesis-export.json
-```
-
-3. Download Secretcli v1.2.0
+2. Download Secretcli v1.2.0
 ```
 wget -o secretcli https://github.com/scrtlabs/SecretNetwork/releases/download/v1.2.0/secretcli-Linux
 ```
 
-4. Migrate the state
+3. Migrate the state
 ```
 secretd migrate ./secret-3-genesis-export.json --chain-id=secret-4 --initial-height=813800 --genesis-time=TBD > genesis.json
 ```
 
-5. Verify the hash of the final genesis file:
+4. Verify the hash of the final genesis file:
 ```
-$ sha256sum genesis.json
+$ echo "TBD genesis.json" | sha256sum --check
 ```
 
 ### Node Migration
