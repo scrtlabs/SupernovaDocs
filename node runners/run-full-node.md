@@ -190,7 +190,6 @@ secretd configure-secret node-master-cert.der "$SEED"
 
 ### 16. Add persistent peers to your configuration file.
 
-:warn: These are testnet parameters, mainnet parameters TDB:
 ```bash
 perl -i -pe 's/persistent_peers = ""/persistent_peers = "TBD\@TBD:26656"/' ~/.secretd/config/config.toml
 ```
