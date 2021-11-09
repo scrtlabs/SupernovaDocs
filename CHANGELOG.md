@@ -9,6 +9,7 @@ Version 1.2.0 has been released, called the Supernova upgrade!
 * Upgraded to Cosmos SDK 0.44.3. Full changelog can be found [here](https://github.com/cosmos/cosmos-sdk/blob/v0.44.3/CHANGELOG.md)
 
 * Gas prices are lower - as a result of performance upgrades and optimizations, gas amounts required will be much lower.
+
 * GRPC for cosmos-sdk modules in addition to legacy REST API. See API [here](http://api.scrt.network/swagger/)
 
 * New modules:
@@ -31,7 +32,7 @@ Version 1.2.0 has been released, called the Supernova upgrade!
 
 GRPC endpoints have been added for cosmos-sdk modules in addition to legacy REST APIs, which remain mostly unchanged.
 
-GRPC endpoints for the registration and compute modules will be added in a future testnet release
+GRPC endpoints for the registration and compute modules will be added in a future release
 
 ## SecretCLI and Secretd
 
@@ -39,7 +40,9 @@ Unlike other cosmos chains, we chose to maintain the differentiating CLI and Nod
 SecretCLI still contains the interface for all user-facing commands and trying to run node-running commands using SecretCLI will fail.
 Secretd now contains both node-running and user-facing commands.
 
-As a result of cosmos-sdk upgrade, some CLI commands will have different syntax
+As a result of cosmos-sdk upgrade, some CLI commands will have different syntax, mainly:
+
+* Querying of balances is now done via `secretcli q bank balances <account>`
 
 Secretd nodes now run the REST API (previously named LCD REST server) by default on port 1317. You can change this behavior by
 modifying /home/\<account\>/.secretd/config/app.toml and looking for the `api` configuration options
