@@ -40,4 +40,4 @@ $ sha256sum genesis.json
 
 ## Validator Migration
 
-You can find instructions on migration [here](https://github.com/scrtlabs/SupernovaDocs/blob/master/validators/migrate-a-validator.md)
+You can find instructions on migration [here](./validators/migrate-a-validator.md)
