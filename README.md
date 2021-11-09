@@ -38,6 +38,14 @@ secretd migrate ./secret-3-genesis-export.json --chain-id=secret-4 --initial-hei
 $ sha256sum genesis.json
 ```
 
-## Validator Migration
+## Node Migration
 
-You can find instructions on migration [here](./validators/migrate-a-validator.md)
+1. Gracefully halt the secret-3 by configuring halt height - 
+
+```
+perl -i -pe 's/^halt-height =.*/halt-height = 813800/' ~/.secretd/config/app.toml
+```
+
+And restarting your node
+
+2. Follow further instructions on migration [here](./validators/migrate-a-validator.md)
