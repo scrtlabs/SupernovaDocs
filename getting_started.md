@@ -4,15 +4,15 @@ Version 1.2.0 - Supernova upgrade
 
 ## Network Information
 
-Explorer: https://secretnodes.com/secret/chains/secret-4/
+Explorer: `TBD`
 
 chain-id: secret-4
 
 Bootstrap nodes:
-TBD
+* `TBD`
 
 Docker Image Name:
-* `enigmampc/secret-network-node:v1.2.0`
+* `enigmampc/secret-network-node:v1.2.0-mainnet`
 
 Registration service (for docker image or auto registration):
-* `register.enigma.co:36667`
+* `TBD`
