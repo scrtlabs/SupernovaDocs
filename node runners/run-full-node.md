@@ -1,14 +1,14 @@
 # How To Join Secret Network as a Full Node
 
-This document details how to join the Secret Network as a full node. Once your full node is running, you can turn it into a validator in the optional last step.
+This document details how to join the Secret Network `secret-4` mainnet as a full node. Once your full node is running, you can turn it into a validator in the optional last step.
 
 ## Requirements
 
 - Ubuntu/Debian host (with ZFS or LVM to be able to add more storage easily)
 - A public IP address
 - Open ports `TCP 26656 & 26657` _Note: If you're behind a router or firewall then you'll need to port forward on the network device._
-- Reading https://docs.tendermint.com/master/tendermint-core/running-in-production.html
-- RPC address of an already active node. You can use `bootstrap.secrettestnet.io:26657`, or any other node that exposes RPC services.
+- Reading [Tendermint: Running in production](https://docs.tendermint.com/v0.34/tendermint-core/running-in-production.html)
+- RPC address of an already active node. You can use any node that exposes RPC services.
 
 ### Minimum requirements
 
@@ -23,13 +23,12 @@ This document details how to join the Secret Network as a full node. Once your f
 - 2 dedicated cores of any Intel Skylake processor (Intel® 6th generation) or better
 - Motherboard with support for SGX in the BIOS
 
-Refer to https://ark.intel.com/content/www/us/en/ark.html#@Processors if unsure if your processor supports SGX
+Refer to [Intel Processor Specifications](https://ark.intel.com/content/www/us/en/ark.html#@Processors) if you're unsure if your processor supports SGX
 
 ## Installation
 
 ### 0. Step up SGX on your local machine
-
-See instructions for [setup](setup-sgx.md) and [verification](verify-sgx.md).
+See instructions for [setup](setup-sgx-mainnet.md) and [verification](verify-sgx.md).
 
 ### 1. Download the Secret Network package installer for Debian/Ubuntu:
 
@@ -37,7 +36,7 @@ See instructions for [setup](setup-sgx.md) and [verification](verify-sgx.md).
 wget https://github.com/enigmampc/SecretNetwork/releases/download/v1.2.0/secretnetwork_1.2.0_amd64.deb
 ```
 
-([How to verify releases](../../../verify-releases.md))
+([How to verify releases](https://github.com/scrtlabs/SecretNetwork/blob/master/docs/verify-releases.md))
 
 ### 2. Install the package:
 
@@ -72,7 +71,7 @@ echo "TBD $HOME/.secretd/config/genesis.json" | sha256sum --check
 secretd validate-genesis
 ```
 
-### 7. The rest of the commands should be ran from the home folder (`/home/<your_username>`)
+### 7. The rest of the commands should be run from the home folder (`/home/<your_username>`)
 
 ```bash
 cd ~
@@ -86,10 +85,9 @@ Make sure the directory `/opt/secret/.sgx_secrets` exists:
 mkdir -p /opt/secret/.sgx_secrets
 ```
 
-If you are migrating an existing node, copy the contents of `~/.sgx_secrets` to `/opt/secret/.sgx_secrets`
-
 ```bash
-cp ~/.sgx_secrets/* /opt/secret/.sgx_secrets/
+export SCRT_ENCLAVE_DIR=/usr/lib
+export SCRT_SGX_STORAGE=/opt/secret/.sgx_secrets
 ```
 
 ```bash
@@ -133,7 +131,7 @@ echo $PUBLIC_KEY
 
 The steps using `secretcli` can be run on any machine, they don't need to be on the full node itself. We'll refer to the machine where you are using `secretcli` as the "CLI machine" below.
 
-To run the steps with `secretcli` on another machine, [set up the CLI](../contract%20developers/install_cli.md) there.
+To run the steps with `secretcli` on another machine, [set up the CLI](../contract%20developers/cli.md) there.
 
 Configure `secretcli`. Initially you'll be using the bootstrap node, as you'll need to connect to a running node and your own node is not running yet.
 
@@ -192,6 +190,7 @@ secretd configure-secret node-master-cert.der "$SEED"
 
 ### 16. Add persistent peers to your configuration file.
 
+:warn: These are testnet parameters, mainnet parameters TDB:
 ```bash
 perl -i -pe 's/persistent_peers = ""/persistent_peers = "TBD\@TBD:26656"/' ~/.secretd/config/config.toml
 ```
@@ -266,11 +265,11 @@ secretcli config output json
 secretcli config node tcp://<your-public-ip>:26657
 ```
 
-### 22. Optional: make your full node a validator
+### 22. Optional: make your full node is a validator
 
 Your full node is now part of the network, storing and verifying chain data and Secret Contracts, and helping to distribute transactions and blocks. It's usable as a sentry node, for people to connect their CLI or light clients, or just to support the network.
 
-It is however not producing blocks yet, and you can't delegate funds to it for staking. To do that that you'll have to turn it into a validator by submitting a `create-validator` transaction.
+It is however not producing blocks yet, and you can't delegate funds to it for staking. To do that you'll have to turn it into a validator by submitting a `create-validator` transaction.
 
 On the full node, get the pubkey of the node:
 
