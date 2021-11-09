@@ -2,7 +2,7 @@
 
 ### How to become a validator on Secret Network
 
-#### 1. [Run a new full node](../node%20runners/run-full-node-testnet.md) on a new machine.
+#### 1. [Run a new full node](../node%20runners/run-full-node.md) on a new machine.
 
 #### 2. Set your `minimum-gas-price` parameter
 
