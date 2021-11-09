@@ -12,7 +12,18 @@ We recommend reading the [CHANGELOG.md](CHANGELOG.md) as well as specific inform
 
 ## Node Runners and Validators
 
+### Preparation
+
+Gracefully halt the secret-3 by configuring halt height - 
+
+```
+perl -i -pe 's/^halt-height =.*/halt-height = 813800/' ~/.secretd/config/app.toml
+```
+
+And restarting your node
+
 ### Recovery
+
 Prior to exporting secret-3 state, validators are encouraged to take a full data snapshot at the export height before proceeding. Snapshotting depends heavily on infrastructure, but generally this can be done by backing up the .secretcli and .secretd directories.
 
 In the event that the upgrade does not succeed, validators and operators must downgrade back to v1.0.6, and restore to their latest snapshot before restarting their nodes.
@@ -48,12 +59,4 @@ $ sha256sum genesis.json
 
 ### Node Migration
 
-1. Gracefully halt the secret-3 by configuring halt height - 
-
-```
-perl -i -pe 's/^halt-height =.*/halt-height = 813800/' ~/.secretd/config/app.toml
-```
-
-And restarting your node
-
-2. Follow further instructions on migration [here](./validators/migrate-a-validator.md)
+Follow further instructions on migration [here](./validators/migrate-a-validator.md)
