@@ -6,7 +6,6 @@ Please make sure you [backup your validator](../node%20runners/run-full-node.md)
 
 ### 1. [Run a new full node](../node%20runners/run-full-node.md) on a new machine, but make the following changes:
 
-- rename `~/.secretd/config/priv_val_key.json` to `~/.secretd/config/priv_validator_key.json`. This is configurable in config.toml.
 - copy the `~/.sgx_secrets` directory to the `/opt/secret/.sgx_secrets`
 
 ### 2. Confirm you have the recovery seed phrase information for the active key running on the old machine
