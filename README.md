@@ -1,4 +1,4 @@
-# Upgrade Instructions
+# Supernova Upgrade
 
 Welcome to the Supernova Upgrade! On the 10th of November, *block height 813800* we will be undergoing a network upgrade.
 
