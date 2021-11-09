@@ -37,3 +37,7 @@ secretd migrate ./secret-3-genesis-export.json --chain-id=secret-4 --initial-hei
 ```
 $ sha256sum genesis.json
 ```
+
+## Validator Migration
+
+You can find instructions on migration [here](https://github.com/scrtlabs/SupernovaDocs/blob/master/validators/migrate-a-validator.md)
