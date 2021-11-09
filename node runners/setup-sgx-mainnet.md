@@ -5,7 +5,7 @@ If you're running a local machine and not a cloud-based VM -
 1. Go to your BIOS menu
 2. Enable SGX (Software controlled is not enough)
 3. Disable Secure Boot
-4. Disbale HyperV
+4. Disable HyperV
 
 # Installation
 
@@ -69,7 +69,7 @@ echo "\n\n###############################################"
 echo "#####       Installing Intel SGX PSW          #####"
 echo "###############################################\n\n"
 
-# Add Intels's SGX PPA
+# Add Intel's SGX PPA
 echo "deb [arch=amd64] https://download.01.org/intel-sgx/sgx_repo/ubuntu $DISTRO main" |
    sudo tee /etc/apt/sources.list.d/intel-sgx.list
 wget -qO - https://download.01.org/intel-sgx/sgx_repo/ubuntu/intel-sgx-deb.key |
@@ -197,7 +197,7 @@ echo "\n\n##############################################"
 echo "##### Installing additional dependencies #####"
 echo "##############################################\n\n"
 
-# Add Intels's SGX PPA
+# Add Intel's SGX PPA
 echo "deb [arch=amd64] https://download.01.org/intel-sgx/sgx_repo/ubuntu $DISTRO main" |
    sudo tee /etc/apt/sources.list.d/intel-sgx.list
 wget -qO - https://download.01.org/intel-sgx/sgx_repo/ubuntu/intel-sgx-deb.key |
@@ -267,7 +267,7 @@ cd bin
 ./app
 ```
 
-Should print somting similar to this:
+Should print something similar to this:
 
 ```
 [+] Init Enclave Successful 2!

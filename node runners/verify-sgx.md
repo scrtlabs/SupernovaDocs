@@ -18,7 +18,7 @@ These instructions refer to an installation using:
 - SGX driver [sgx_linux_x64_driver_2.11.0_2d2b795.bin](https://download.01.org/intel-sgx/sgx-linux/2.14/distro/ubuntu20.04-server/sgx_linux_x64_driver_2.11.0_2d2b795.bin)
 - Intel SGX PSW 2.14.100.2
 
-See SGX installation instructions [here](../../../validators-and-full-nodes/setup-sgx.md)
+See SGX installation instructions [here](./setup-sgx-mainnet.md)
 
 Other driver/OS combinations are not guaranteed to work with these instructions. Let us know on `chat.scrt.network` if you intend to run on a different setup.
 
@@ -75,7 +75,7 @@ For the status `CONFIGURATION_AND_SW_HARDENING_NEEDED` we perform a deeper inspe
 
 Consult with the [Intel API](https://api.trustedservices.intel.com/documents/sgx-attestation-api-spec.pdf#page=21) for more on these values.
 
-If you do not see such an output, look for a file called `attestation_cert.der` which should have been created in your `$HOME` directory. You can then use the command `secretd parse <path/to/attestation_cert.der>` to check the result a successful result should be a 64 byte hex string (e.g. `0x9efe0dc689447514d6514c05d1161cea15c461c62e6d72a2efabcc6b85ed953b`.
+If you do not see such an output, look for a file called `attestation_cert.der` which should have been created in your `$HOME` directory. You can then use the command `secretd parse <path/to/attestation_cert.der>` to check the result a successful result should be a 64 byte hex string (e.g. `0x9efe0dc689447514d6514c05d1161cea15c461c62e6d72a2efabcc6b85ed953b`).
 
 ### 4. What to do if this didn't work?
 

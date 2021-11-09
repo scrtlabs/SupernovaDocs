@@ -5,8 +5,8 @@ This is a self-signed X.509 certificate that contains a signed report by Intel, 
 The report contains both a report that the enclave is genuine, a code hash, and a signature of the creator of the enclave.
 
 #### Seed
-this is a parameter that is shared between all enclaves on the network in order to garuantee determinisic calculations. 
-When a node authenticates succesfully, the network encrypts the seed and shares it with the node. Protocol internals are described [here](https://github.com/enigmampc/SecretNetwork/blob/master/docs/protocol/encryption-specs.md)  
+this is a parameter that is shared between all enclaves on the network in order to guarantee deterministic calculations. 
+When a node authenticates successfully, the network encrypts the seed and shares it with the node. Protocol internals are described [here](https://github.com/enigmampc/SecretNetwork/blob/master/docs/protocol/encryption-specs.md)  
 
 ## Background
 
@@ -57,7 +57,7 @@ or this step might fail.
 
 `secretd init-enclave`
 
-If `init-enclave` was succssful, you should see `attestation_cert.der` created. This is the _attestation certificate_ which we will 
+If `init-enclave` was successful, you should see `attestation_cert.der` created. This is the _attestation certificate_ which we will 
 need for the next step.
 
 #### Check your certificate is valid
@@ -71,7 +71,7 @@ You can use the command `secretd parse <certificate_file>` to validate the file,
 This public key is what the network will use to encrypt the seed, so only your enclave can decrypt it.
 
 Note: This step will locally verify the certificate only, and will not check the enclave status or the code hash of the enclave. 
-Authetnication with the network may still fail due to either of those causes.
+Authentication with the network may still fail due to either of those causes.
 
 #### Register your node on-chain
 
@@ -98,7 +98,7 @@ This will create a couple of files in your current path, mainly `node-master-cer
 
 #### Configure your local node
 
-Since the previous command was ran only using the `secretcli` we must now run a final command to load all our startup parameters to `secretd`
+Since the previous command was run only using the `secretcli` we must now run a final command to load all our startup parameters to `secretd`
 
 `secretd configure-secret node-master-cert.der "$SEED"`
 
