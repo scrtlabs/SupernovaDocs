@@ -15,7 +15,7 @@ Validators may perform these steps manually, however links to the genesis file w
 
 1. Export the state:
 ```bash
-secretd export --height=813800 --whitelist <tbd> > secret-3-genesis-export.json
+secretd export --height=813800 --for-zero-height --jail-whitelist secretvaloper1qx5pppsfrqwlnmxj7prpx8rysxm2u5vzhaux25 > secret-3-genesis-export.json
 ```
 
 2. Verify the hash:
@@ -37,7 +37,3 @@ secretd migrate ./secret-3-genesis-export.json --chain-id=secret-4 --initial-hei
 ```
 $ sha256sum genesis.json
 ```
-
-## Upgrade Procedure
-
-We recommend 
