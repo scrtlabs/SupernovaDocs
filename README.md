@@ -6,7 +6,7 @@ The estimated halt time is `Wed Nov 10 15:00:00 UTC 2021`
 
 ## App Developers
 
-We recommend reading the CHANGELOG.md as well as specific information in [app developers](./app_developers) and make sure your apps are compatible with the upgrade
+We recommend reading the CHANGELOG.md as well as specific information in [app developers](./app developers) and make sure your apps are compatible with the upgrade
 
 ## Node Runners and Validators
 
