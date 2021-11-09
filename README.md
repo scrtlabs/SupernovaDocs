@@ -4,6 +4,8 @@ Welcome to the Supernova Upgrade! On the 10th of November, *block height 813800*
 
 The estimated halt time is `Wed Nov 10 15:00:00 UTC 2021`
 
+We expect the upgrade process to take up to 2 hours.
+
 Please note that the `ibc` module will be disabled on launch, and will require a governance proposal to enable
 
 ## App Developers
