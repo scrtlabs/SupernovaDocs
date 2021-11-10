@@ -22,20 +22,20 @@ perl -i -pe 's/^halt-height =.*/halt-height = 813800/' ~/.secretd/config/app.tom
 sudo systemctl restart secret-node
 ```
 
-### Export up your keys
+### 2. Export up your keys
 If you need to export keys from `secretd` or `secretcli`, do that now:
 ```shell
 secretd keys export <your key> 2> foobar.key
 secretcli keys export <your key> 2> barbaz.key
 ```
 
-### 2. Make a backup
+### 3. Make a backup
 After the chain halts Back up the state of the `secret-3` chain:
 ```shell
 mv ~/.secretd ~/.secretd.backup
 ```
 
-### 3. Install the new binaries
+### 4. Install the new binaries
 Then install the new release:
 ```bash
 cd ~
@@ -51,7 +51,7 @@ sudo apt install -y ./secretnetwork_1.2.0_amd64.deb
 sudo chmod +x /usr/local/bin/secretd
 ```
 
-### Import your keys
+### 5. Import your keys
 import the key files that you previously exported. `secretcli` and `secretd` now share the configuration so you only have to import to one of them.
 
 Also, make sure you're using the right `--hd-path`. e.g. `--legacy-hd-path` or `--hd-path "44'/118'/0'/0/0"`.
@@ -60,7 +60,7 @@ secretd keys import mykey foobar.key
 secretd keys import mykey barbaz.key
 ```
 
-#### Initialize the new node
+### 6. Initialize the new node
 
 ```shell
 secretd init <MONIKER> --chain-id secret-4
@@ -82,7 +82,7 @@ log_level = "main:info,state:info,*:error"
 log_level = "info"
 ```
 
-### 3. Import the quicksync data (optional)
+### 7. Import the quicksync data (optional)
 ```bash
 cd ~
 
@@ -93,7 +93,7 @@ echo "TBD quicksync.tar.xz" | sha256sum --check
 pv quicksync.tar.xz | tar -xJf -
 ```
 
-### 7. Set up your SGX machine and become a `secret-4` validator
+### 8. Set up your SGX machine and become a `secret-4` validator
 
 ```bash
 cd ~

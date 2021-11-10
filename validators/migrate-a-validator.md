@@ -87,3 +87,18 @@ On the new machine:
 ```bash
 sudo systemctl start secret-node
 ```
+
+Once your node is done catching up, you can unjail your validator:
+
+```bash
+secretcli config chain-id secret-4
+secretcli tx slashing unjail --from "$YOUR_KEY_NAME" --gas-prices 0.25uscrt
+```
+
+You’re now a validator in `secret-4`! :tada:
+
+To make sure your validator is unjailed, look for it in here:
+
+```bash
+secretcli q staking validators | jq -r '.[] | select(.status == 2) | .description.moniker'
+```
