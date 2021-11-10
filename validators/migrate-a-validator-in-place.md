@@ -70,7 +70,7 @@ cp ~/.secretd.backup/.node/seed.json ~/.secretd/.node/seed.json
 cp ~/.secretd.backup/config/priv_validator_key.json ~/.secretd/config/priv_validator_key.json
 
 mkdir -p /opt/secret/.sgx_secrets
-sudo cp -rf ~/.sgx_secrets /opt/secret/.sgx_secrets
+sudo cp -rf ~/.sgx_secrets /opt/secret/
 ```
 - **Note**: if you get `Error: failed to parse log level (main:info,state:info,*:error): Unknown Level String: 'main:info,state:info,*:error', defaulting to NoLevel` when running `secretd`, change the following value in `.secretd/config/config.toml`:
 ```
