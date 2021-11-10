@@ -75,10 +75,8 @@ You can copy it manually or for example you can copy the file to the new machine
 On the validator node on the old machine:
 
 ```bash
-scp ~/.secretd/config/priv_val_key.json ubuntu@new_machine_ip:~/.secretd/config/priv_validator_key.json
+scp ~/.secretd/config/priv_validator_key.json ubuntu@new_machine_ip:~/.secretd/config/priv_validator_key.json
 ```
-
-- **Note:** If you're copying it from a machine that was running `secret-3`, notice that the `priv_val_key.json` file changed it's name to `priv_validator_key.json`.
 
 ### 7. On the new server start the new full node which is now your validator node.
 
