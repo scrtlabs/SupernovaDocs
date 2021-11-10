@@ -99,9 +99,9 @@ pv quicksync.tar.xz | tar -xJf -
 ```bash
 cd ~
 
-wget -O ~/.secretd/config/genesis.json "TBD"
+wget -O ~/.secretd/config/genesis.json "https://github.com/scrtlabs/SecretNetwork/releases/download/v1.2.0/genesis.json"
 
-echo "TBD .secretd/config/genesis.json" | sha256sum --check
+echo "759e1b6761c14fb448bf4b515ca297ab382855b20bae2af88a7bdd82eb1f44b9 .secretd/config/genesis.json" | sha256sum --check
 
 perl -i -pe 's/pruning =.*/pruning = "everything"/' ~/.secretd/config/app.toml
 
