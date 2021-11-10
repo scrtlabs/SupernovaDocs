@@ -83,7 +83,7 @@ mkdir -p /opt/secret/.sgx_secrets
 sudo cp -rf ~/.sgx_secrets /opt/secret/.sgx_secrets
 ```
 
-### 3. Import the quicksync data
+### 3. Import the quicksync data (optional)
 ```bash
 cd ~
 
