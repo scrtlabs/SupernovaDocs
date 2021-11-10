@@ -25,7 +25,6 @@ sudo systemctl restart secret-node
 ### 2. Export up your keys
 If you need to export keys from `secretd` or `secretcli`, do that now:
 ```shell
-secretd keys export <your key> 2> foobar.key
 secretcli keys export <your key> 2> barbaz.key
 ```
 
