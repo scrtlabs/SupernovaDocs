@@ -111,7 +111,7 @@ export SCRT_SGX_STORAGE=/opt/secret/.sgx_secrets
 Register:
 
 ```bash
-secretd auto-register --node test.node.scrtlabs.com --registration-service register.mainnet.enigma.co:26667
+secretd auto-register --node http://bootstrap.node.scrtlabs.com:1317 --registration-node http://register.mainnet.enigma.co:26667
 ```
 
 **If this step was successful, you can skip straight to [step 16](#16-add-persistent-peers-to-your-configuration-file)**
