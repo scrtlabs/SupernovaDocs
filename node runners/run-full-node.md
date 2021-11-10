@@ -77,7 +77,21 @@ secretd validate-genesis
 cd ~
 ```
 
+### 8. Initialize secret enclave
+
+You can choose between two ways, **8a (automatic)** or **8b (manual)**:
+
+**Note:** if this machine has been registered before, and have the following files:
+```bash
+/home/user/.sgx_secrets/
+├── consensus_seed.sealed
+└── new_node_seed_exchange_keypair.sealed
+```
+you can move them to `/opt/secret/.sgx_secrets` and skip to **step 16** (if not working, try registering anyway).
+
 ### 8a. Initialize secret enclave - Automatic Registration (EXPERIMENTAL)
+
+- **Note:** Make sure SGX is running or this step might fail.
 
 Make sure the directory `/opt/secret/.sgx_secrets` exists:
 
@@ -85,10 +99,14 @@ Make sure the directory `/opt/secret/.sgx_secrets` exists:
 mkdir -p /opt/secret/.sgx_secrets
 ```
 
+Create env variables:
+
 ```bash
 export SCRT_ENCLAVE_DIR=/usr/lib
 export SCRT_SGX_STORAGE=/opt/secret/.sgx_secrets
 ```
+
+Register:
 
 ```bash
 secretd auto-register --node test.node.scrtlabs.com --registration-service register.mainnet.enigma.co:26667

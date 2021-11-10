@@ -4,9 +4,7 @@
 
 Please make sure you [backup your validator](../node%20runners/run-full-node.md) before you migrate it.
 
-### 1. [Run a new full node](../node%20runners/run-full-node.md) on a new machine, but make the following changes:
-
-- copy the `~/.sgx_secrets` directory to the `/opt/secret/.sgx_secrets`
+### 1. [Set up a new full node](../node%20runners/run-full-node.md) on a new machine, steps 1 through 19
 
 ### 2. Confirm you have the recovery seed phrase information for the active key running on the old machine
 
@@ -77,8 +75,10 @@ You can copy it manually or for example you can copy the file to the new machine
 On the validator node on the old machine:
 
 ```bash
-scp ~/.secretd/config/priv_validator_key.json ubuntu@new_machine_ip:~/.secretd/config/priv_validator_key.json
+scp ~/.secretd/config/priv_val_key.json ubuntu@new_machine_ip:~/.secretd/config/priv_validator_key.json
 ```
+
+- **Note:** If you're copying it from a machine that was running `secret-3`, the `priv_val_key.json` file changed it's name to `priv_validator_key.json`.
 
 ### 7. On the new server start the new full node which is now your validator node.
 
