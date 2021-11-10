@@ -16,6 +16,8 @@ Highlights include:
 
 ## Migrating keys
 
+Always make sure you're using the right hd-path.
+
 ### Using the mnemonic
 If you have the mnemonic for your key, you can import it to the new CLI with this command:
 ```shell

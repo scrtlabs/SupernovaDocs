@@ -34,6 +34,8 @@ See instructions for [setup](setup-sgx-mainnet.md) and [verification](verify-sgx
 
 ```bash
 wget https://github.com/enigmampc/SecretNetwork/releases/download/v1.2.0/secretnetwork_1.2.0_amd64.deb
+# check the hash of the downloaded binary
+echo "b8cf9be5c81e510584a9e829b9db4bfee02fedb2584e76bb6d6901a29d73ad06 secretnetwork_1.2.0_amd64.deb" | sha256sum --check
 ```
 
 ([How to verify releases](https://github.com/scrtlabs/SecretNetwork/blob/master/docs/verify-releases.md))

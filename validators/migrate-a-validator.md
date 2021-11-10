@@ -4,7 +4,9 @@
 
 Please make sure you [backup your validator](../node%20runners/run-full-node.md) before you migrate it.
 
-### 1. [Set up a new full node](../node%20runners/run-full-node.md) on a new machine, steps 1 through 19
+### 1a. [Set up a new full node](../node%20runners/run-full-node.md) on a new machine, steps 1 through 19, or:
+
+### 1b If you wish to migrate your validator WITHOUT setting up a new node, please [follow this guide instead](./migrate-a-validator-in-place.md)
 
 ### 2. Confirm you have the recovery seed phrase information for the active key running on the old machine
 
