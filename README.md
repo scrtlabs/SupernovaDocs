@@ -41,7 +41,8 @@ secretd export --height=813800 --for-zero-height --jail-whitelist secretvaloper1
 
 2. Download Secretcli v1.2.0
 ```
-wget -o secretcli https://github.com/scrtlabs/SecretNetwork/releases/download/v1.2.0/secretcli-Linux
+wget -O secretcli https://github.com/scrtlabs/SecretNetwork/releases/download/v1.2.0/secretcli-Linux
+chmod +x ./secretcli
 ```
 
 3. Migrate the state, using the downloaded Secretcli v1.2.0
