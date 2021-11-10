@@ -17,7 +17,7 @@ Prepare your `secret-3` validator to halt at 2021-11-10 15:00:00 UTC.
 On the old chain (`secret-3`):
 
 ```bash
-perl -i -pe 's/^halt-time =.*/halt-time = 813800/' ~/.secretd/config/app.toml
+perl -i -pe 's/^halt-height =.*/halt-height = 813800/' ~/.secretd/config/app.toml
 
 sudo systemctl restart secret-node
 ```
