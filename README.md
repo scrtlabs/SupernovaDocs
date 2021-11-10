@@ -53,7 +53,7 @@ chmod +x ./secretcli
 
 4. Verify the hash of the final genesis file:
 ```
-$ echo "TBD genesis.json" | sha256sum --check
+$ echo "759e1b6761c14fb448bf4b515ca297ab382855b20bae2af88a7bdd82eb1f44b9 genesis.json" | sha256sum --check
 ```
 
 ### Node Migration
