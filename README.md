@@ -39,9 +39,10 @@ Validators may perform these steps manually, however links to the genesis file w
 secretd export --height=813800 --for-zero-height --jail-whitelist secretvaloper1qx5pppsfrqwlnmxj7prpx8rysxm2u5vzhaux25 > secret-3-genesis-export.json
 ```
 
-2. Download Secretcli v1.2.0
+2. Download Secret Network v1.2.0 and install it
 ```
-wget -o secretcli https://github.com/scrtlabs/SecretNetwork/releases/download/v1.2.0/secretcli-Linux
+wget "https://github.com/scrtlabs/SecretNetwork/releases/download/v1.2.0/secretnetwork_1.2.0_amd64.deb"
+sudo apt install -y ./secretnetwork_1.2.0_amd64.deb
 ```
 
 3. Migrate the state
