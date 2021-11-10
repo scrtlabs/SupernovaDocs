@@ -36,7 +36,8 @@ Validators may perform these steps manually, however links to the genesis file w
 
 1. Export the state:
 ```bash
-secretd export --height=813800 --for-zero-height --jail-whitelist secretvaloper1qx5pppsfrqwlnmxj7prpx8rysxm2u5vzhaux25 > secret-3-genesis-export.json
+secretd export --height=813800 --for-zero-height --jail-whitelist secretvaloper1qx5pppsfrqwlnmxj7prpx8rysxm2u5vzhaux25 > secret-3-genesis-export.log
+tail -1 secret-3-genesis-export.log > secret-3-genesis-export.json
 ```
 
 2. Download Secretcli v1.2.0
@@ -47,7 +48,7 @@ chmod +x ./secretcli
 
 3. Migrate the state, using the downloaded Secretcli v1.2.0
 ```
-./secretcli migrate ./secret-3-genesis-export.json --chain-id=secret-4 --initial-height=813800 --genesis-time=TBD > genesis.json
+./secretcli migrate ./secret-3-genesis-export.json --chain-id=secret-4 --initial-height=813800 --genesis-time=TBD --log_level info > genesis.json
 ```
 
 4. Verify the hash of the final genesis file:
