@@ -104,8 +104,7 @@ echo "759e1b6761c14fb448bf4b515ca297ab382855b20bae2af88a7bdd82eb1f44b9 .secretd/
 
 perl -i -pe 's/pruning =.*/pruning = "everything"/' ~/.secretd/config/app.toml
 
-# :warn: Still not correct for mainnet!
-perl -i -pe 's/persistent_peers =.*/persistent_peers = "3612fb4f7b146f45e8f09a8b8c36ebc041934049\@185.56.139.85:26656,b8e2408b7f4cb556b71350ea4c6930b8db1e2599\@anode1.trivium.xiphiar.com:26656,e768e605f9a3a8eb7c36c36a6dbf9bd707ac0bd0\@bootstrap.secretnodes.org:26656,27db2f21cfcbfa40705d5c516858f51d5af07e03\@20.51.225.193:26656"/' ~/.secretd/config/config.toml
+perl -i -pe 's/persistent_peers =.*/persistent_peers = "7127b730503eb8fd9e3c5fb7a92a210472da8fd3\@bootstrap.node.scrtlabs.com:26656"/' ~/.secretd/config/config.toml
 
 sudo systemctl enable secret-node
 
