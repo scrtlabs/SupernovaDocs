@@ -87,7 +87,7 @@ You can choose between two ways, **8a (automatic)** or **8b (manual)**:
 ├── consensus_seed.sealed
 └── new_node_seed_exchange_keypair.sealed
 ```
-you can move them to `/opt/secret/.sgx_secrets` and skip to **step 16** (if not working, try registering anyway).
+you can move them to `/opt/secret/.sgx_secrets` and skip to **[step 16](#16-add-persistent-peers-to-your-configuration-file)** (if not working, try registering anyway).
 
 ### 8a. Initialize secret enclave - Automatic Registration (EXPERIMENTAL)
 
