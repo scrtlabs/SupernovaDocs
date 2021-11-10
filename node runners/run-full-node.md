@@ -211,7 +211,7 @@ secretd configure-secret node-master-cert.der "$SEED"
 ### 16. Add persistent peers to your configuration file.
 
 ```bash
-perl -i -pe 's/persistent_peers = ""/persistent_peers = "7127b730503eb8fd9e3c5fb7a92a210472da8fd3\@bootstrap.node.scrtlabs.com:26656"/' ~/.secretd/config/config.toml
+perl -i -pe 's/persistent_peers = ""/persistent_peers = "971911193b09a17c347565d311a3cc4f6004156d\@peer.node.scrtlabs.com:26656"/' ~/.secretd/config/config.toml
 ```
 
 ### 17. Listen for incoming RPC requests so that light nodes can connect to you:
