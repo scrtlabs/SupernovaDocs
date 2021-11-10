@@ -51,15 +51,6 @@ sudo apt install -y ./secretnetwork_1.2.0_amd64.deb
 sudo chmod +x /usr/local/bin/secretd
 ```
 
-- **Note**: if you get `Error: failed to parse log level (main:info,state:info,*:error): Unknown Level String: 'main:info,state:info,*:error', defaulting to NoLevel` when running `secretd` in any of the following steps, change the following value in `.secretd/config/config.toml`:
-```
-# old value
-log_level = "main:info,state:info,*:error"
-
-# new value
-log_level = "info"
-```
-
 ### Import your keys
 import the key files that you previously exported. `secretcli` and `secretd` now share the configuration so you only have to import to one of them.
 
@@ -81,6 +72,14 @@ cp ~/.secretd.backup/config/priv_validator_key.json ~/.secretd/config/priv_valid
 
 mkdir -p /opt/secret/.sgx_secrets
 sudo cp -rf ~/.sgx_secrets /opt/secret/.sgx_secrets
+```
+- **Note**: if you get `Error: failed to parse log level (main:info,state:info,*:error): Unknown Level String: 'main:info,state:info,*:error', defaulting to NoLevel` when running `secretd`, change the following value in `.secretd/config/config.toml`:
+```
+# old value
+log_level = "main:info,state:info,*:error"
+
+# new value
+log_level = "info"
 ```
 
 ### 3. Import the quicksync data (optional)
