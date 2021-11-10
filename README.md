@@ -48,7 +48,7 @@ chmod +x ./secretcli
 
 3. Migrate the state, using the downloaded Secretcli v1.2.0
 ```
-./secretcli migrate ./secret-3-genesis-export.json --chain-id=secret-4 --initial-height=813800 --genesis-time=TBD --log_level info > genesis.json
+./secretcli migrate ./secret-3-genesis-export.json --chain-id=secret-4 --initial-height=813800 --genesis-time=2021-11-10T15:00:00Z --log_level info > genesis.json
 ```
 
 4. Verify the hash of the final genesis file:
