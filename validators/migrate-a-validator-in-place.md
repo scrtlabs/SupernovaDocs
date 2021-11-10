@@ -25,8 +25,9 @@ sudo systemctl restart secret-node
 ### 2. Export up your keys
 If you need to export keys from `secretd` or `secretcli`, do that now:
 ```shell
-secretcli keys export <your key> 2> barbaz.key
+secretcli keys export <your key> 2> foobar.key
 ```
+Depending on your setup the command above might prompt for a password in which case remove the `2> foobar.key` part, follow the prmpt, and manually copy the key to a file.
 
 ### 3. Make a backup
 After the chain halts Back up the state of the `secret-3` chain:
@@ -55,8 +56,7 @@ import the key files that you previously exported. `secretcli` and `secretd` now
 
 Also, make sure you're using the right `--hd-path`. e.g. `--legacy-hd-path` or `--hd-path "44'/118'/0'/0/0"`.
 ```shell
-secretd keys import mykey foobar.key
-secretd keys import mykey barbaz.key
+secretd keys import <your key> foobar.key
 ```
 
 ### 6. Initialize the new node
