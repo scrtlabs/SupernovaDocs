@@ -1,5 +1,7 @@
 # Supernova Upgrade
 
+See the general network parameters here: https://github.com/scrtlabs/SecretNetwork/releases/tag/v1.2.0
+
 Welcome to the Supernova Upgrade! On the 10th of November, *block height 813800* we will be undergoing a network upgrade.
 
 The estimated halt time is `Wed Nov 10 15:00:00 UTC 2021`
