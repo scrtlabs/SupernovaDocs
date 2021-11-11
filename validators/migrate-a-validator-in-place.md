@@ -22,6 +22,11 @@ perl -i -pe 's/^halt-height =.*/halt-height = 813800/' ~/.secretd/config/app.tom
 sudo systemctl restart secret-node
 ```
 
+Since the halt time has passed, just stop your node
+```bash
+sudo systemctl stop secret-node
+```
+
 ### 2. Export up your keys
 If you need to export keys from `secretd` or `secretcli`, do that now:
 ```shell
