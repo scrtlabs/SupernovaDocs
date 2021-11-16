@@ -15,13 +15,13 @@ The scripts in the guide will be for Linux (tested on Ubuntu 18.04), but you cou
 
 ### Minimum requirements
 
-- 1GB RAM
+- 16GB RAM (and 10 GB of swap memory)
 - 100GB HDD
 - 1 dedicated core of any Intel Skylake processor (Intel® 6th generation) or better
 
 ### Recommended requirements
 
-- 2GB RAM
+- 32GB RAM
 - 256GB SSD
 - 2 dedicated cores of any Intel Skylake processor (Intel® 6th generation) or better
 - Motherboard with support for SGX in the BIOS
