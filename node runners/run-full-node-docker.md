@@ -4,7 +4,7 @@ So you don't want to fiddle with the .deb file, and just want to run your node? 
 
 This guide will help you set up a node, but you will need to maintain it, or change the default setup. We recommend being familiar with Linux, docker, and docker-compose.
 
-The scripts in the guide will be for Linux (tested on Ubuntu 18.04), but you could get this working on Windows if you swing that way too.
+The scripts in the guide will be for Linux (tested on Ubuntu 20.04), but you could get this working on Windows if you swing that way too.
 
 ## Requirements
 
@@ -99,7 +99,7 @@ services:
     tty: true
 
   node:
-    image: enigmampc/secret-network-node:v1.2.0-beta1-2-gbe1ca55e-testnet
+    image: enigmampc/secret-network-node:v1.2.0-mainnet
     devices:
       - /dev/isgx
     volumes:
@@ -144,14 +144,14 @@ Note: If you delete or lose either the .secretd or the .sgx_secrets folder your 
 ### 5. Set up environment variables
 
 - MONIKER - your network name
-- RPC_URL - address of a node with an open RPC service (you can use `bootstrap.supernova.enigma.co:26657`)
-- CHAINID - chain-id of the network (for testnet this is `supernova-1`)
-- PERSISTENT_PEERS - List of peers to connect to initially (for this testnet use `115aa0a629f5d70dd1d464bc7e42799e00f4edae@bootstrap.supernova.enigma.co:26656`)
-- REGISTRATION_SERVICE - Address of registration service (this will help the node start automatically without going through all the manual steps in the other guide) - `register.mainnet.enigma.co:36667`
+- RPC_URL - address of a node with an open RPC service (you can use `bootstrap.node.scrtlabs.com:26657`)
+- CHAINID - chain-id of the network (for testnet this is `supernova-1`, for mainnet this is `secret-4`)
+- PERSISTENT_PEERS - List of peers to connect to initially (for this testnet use `115aa0a629f5d70dd1d464bc7e42799e00f4edae@bootstrap.node.scrtlabs.com:26656`)
+- REGISTRATION_SERVICE - Address of registration service (this will help the node start automatically without going through all the manual steps in the other guide) - `register.mainnet.enigma.co:26667`
 
 You can set an environment variable using the `export` syntax
 
-`export RPC_URL=bootstrap.supernova.enigma.co:26657`
+`export RPC_URL=bootstrap.node.scrtlabs.com:26657`
 
 ### 6. Start your node
 
