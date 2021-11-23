@@ -122,7 +122,7 @@ Now wait until you're done catching up. This is fast.
 Once the following command outputs `true` you can continue:
 
 ```bash
-watch 'secretcli status | jq ".sync_info.catching_up == false"'
+watch 'secretcli status | jq ".SyncInfo.catching_up == false"'
 ```
 
 Once your node is done catching up, you can unjail your validator:
