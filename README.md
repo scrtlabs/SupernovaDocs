@@ -36,7 +36,9 @@ In the event that the upgrade does not succeed, validators and operators must do
 
 Validators may perform these steps manually, however links to the genesis file will be published once export and migration are complete.
 
-1. Export the state:
+1. Export the state: 
+
+*You need to stop the node to perform this.*
 ```bash
 secretd export --height=813800 --for-zero-height --jail-whitelist secretvaloper1qx5pppsfrqwlnmxj7prpx8rysxm2u5vzhaux25 > secret-3-genesis-export.log
 tail -1 secret-3-genesis-export.log > secret-3-genesis-export.json
