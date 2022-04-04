@@ -13,7 +13,7 @@ If you're running a local machine and not a cloud-based VM -
 
 ### Install SGX
 
-Note: `sgx_linux_x64_driver_2.6.0_602374c.bin` is the latest driver as of July 13, 2020. Please check under https://download.01.org/intel-sgx/sgx-linux/ that this is still the case. If not, please send us a PR or notify us.
+Note: `sgx_linux_x64_driver_2.11.0_2d2b795.bin` is the latest driver as of July 13, 2020. Please check under https://download.01.org/intel-sgx/sgx-linux/ that this is still the case. If not, please send us a PR or notify us.
 
 ```bash
 #! /bin/bash
