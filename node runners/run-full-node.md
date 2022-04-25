@@ -225,6 +225,7 @@ perl -i -pe 's/laddr = .+?26657"/laddr = "tcp:\/\/0.0.0.0:26657"/' ~/.secretd/co
 ```bash
 sudo systemctl enable secret-node
 ```
+If the service fails to run, make sure you have the full path of secertd as ExecStart (/usr/local/bin/secretd)
 
 ### 19. Start `secret-node` as a system service:
 
